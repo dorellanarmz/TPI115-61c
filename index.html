@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title>GC18090 - Miguel Galdámez</title>
+	<meta charset="utf-8"  />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<LINK REL=StyleSheet HREF="estilo.css" TYPE="text/css" MEDIA=screen>
+<script src="codigo.js"></script>
+
+</head>
+
+<body >
+	
+	<div class="container mt-5">
+		<h1>Ejemplo web api CON RETOOL</h1>
+		<div class="row">
+			<div class="col">
+				<span><b>Nombre:</b> Miguel Angel Galdámez Canales</span><br>
+				<span><b>Carnet:</b> GC18090</span><br>
+				<span><b>#equipo:</b> 6</span>
+			<p><button onclick="obtenerProductos();this.style.display='none';" class="btn btn-sm btn-primary mt-2">Obtener Productos</button></p>
+
+			</div>
+			<div class="col"  id="filtros"  style="display:none;">
+				<div>
+					<form name="filtroprods" id="filtroprods">
+					  Seleccione Categorias 
+					  <input type="checkbox" id="c1" value="c1" checked>Electronicos
+					<input type="checkbox" id="c2" value="c2" checked>Joyería
+				  <input type="checkbox" id="c3" value="c3" checked>Ropa Caballero
+				  <input type="checkbox" id="c4" value="c4" checked>Ropa Dama
+				  <ol><li>Click en la imagen para Acercamiento</li>
+				  <li>Click en precio para ordenar Asc o Desc</li></ol>
+					
+					</form>
+					</div>
+			</div>
+			<div class="container">
+				<div class="card mb-3" >
+				  <div class="card-body">
+					<form action="">
+						<div class="row">
+							<div class="col">
+								<label for="">Titulo</label>
+								<input type="text" name="txtitulo" id="txtitulo" class="form-control">
+							</div>
+							<div class="col">
+								<label for="">Precio</label>
+								<input type="number" name="txprecio" id="txprecio" class="form-control">
+							</div>
+							<div class="col">
+								<label for="">Descripcion</label>
+								<input type="text" name="txdescripcion" id="txdescripcion" class="form-control">
+							</div>
+							<div class="col">
+								<label for="">Imagen</label>
+								<input type="text" name="tximagen" id="tximagen" class="form-control">
+							</div>
+							<div class="col">
+								<label for="">Categoria</label>
+								<select name="txcategoria" id="txcategoria" class="form-select">
+									<option value="electronicos">Electronicos</option>
+									<option value="joyeria">Joyería</option>
+									<option value="caballeros">Ropa Caballero</option>
+									<option value="damas">Ropa Dama</option>
+								</select>
+							</div>
+							<div class="col col-12 mt-2">
+								<button class="btn btn-info btn-sm float-end text-light fw-bold" type="button" onclick="guardar()">Guardar</button>
+							</div>
+						</div>
+						
+						
+					</form>
+				  </div>
+				</div>
+			</div>
+			<div id="listado" style="display:none;">
+				<table id="tabla" border="1"  class="table table-responsive table-striped ">
+					<thead class="table-info">
+					<tr><th>id</th><th>foto</th><th  id="price">price</th>
+					<th>title</th><th>description</th><th>category</th>
+					<th>Acciones</th></tr>
+					</thead>
+					<tbody id="tbody"></tbody>
+					</table>
+			</div>
+		</div>
+	</div>
+	
+     
+</body>
+</html>
