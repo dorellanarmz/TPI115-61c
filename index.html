@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-	<title>GC18090 - Miguel Galdámez</title>
+	<title> Dennis Ernesto Orellana Ramirez</title>
 	<meta charset="utf-8"  />
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 <LINK REL=StyleSheet HREF="estilo.css" TYPE="text/css" MEDIA=screen>
@@ -13,12 +13,12 @@
 <body >
 	
 	<div class="container mt-5">
-		<h1>Guia 61C Web api con Retool</h1>
+		<h1><span class="badge bg-dark rounded-pill">Guia 61c</span> Api retool.com</h1>
 		<div class="row">
 			<div class="col">
-				<span><b>Nombre:</b> Miguel Angel Galdámez Canales</span><br>
-				<span><b>Carnet:</b> GC18090</span><br>
-				<span><b>#equipo:</b> 6</span>
+				<span><b>Nombre:</b> Dennis Ernesto Orellana Ramirez</span><br>
+				<span><b>Carnet:</b> OR15012</span><br>
+				<span><b>#equipo:</b> 01</span>
 			<p><button onclick="obtenerProductos();this.style.display='none';" class="btn btn-sm btn-primary mt-2">Obtener Productos</button></p>
 
 			</div>
@@ -50,8 +50,8 @@
 								<input type="number" name="txprecio" id="txprecio" class="form-control">
 							</div>
 							<div class="col">
-								<label for="">Descripcion</label>
-								<input type="text" name="txdescripcion" id="txdescripcion" class="form-control">
+								<text for="">Descripcion</label>
+								<textarea type="text" name="txdescripcion" id="txdescripcion" class="form-control"></textarea>
 							</div>
 							<div class="col">
 								<label for="">Imagen</label>
@@ -67,7 +67,7 @@
 								</select>
 							</div>
 							<div class="col col-12 mt-2">
-								<button class="btn btn-info btn-sm float-end text-light fw-bold" type="button" onclick="guardar()">Guardar</button>
+								<button class="btn btn-dark btn-sm float-start text-light fw-bold" type="button" onclick="guardar()">Guardar</button>
 							</div>
 						</div>
 						
@@ -78,7 +78,7 @@
 			</div>
 			<div id="listado" style="display:none;">
 				<table id="tabla" border="1"  class="table table-responsive table-striped ">
-					<thead class="table-info">
+					<thead class="table-dark">
 					<tr><th>id</th><th>foto</th><th  id="price">price</th>
 					<th>title</th><th>description</th><th>category</th>
 					<th>Acciones</th></tr>

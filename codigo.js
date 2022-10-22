@@ -52,12 +52,12 @@ var fila="<tr><td class='id'></td><td class='foto'></td><td class='price'></td><
 		prices[nfila].innerHTML="$"+productos[nfila].price;
 		fotos[nfila].innerHTML="<img src='"+productos[nfila].image+"'>";
 		fotos[nfila].firstChild.setAttribute("onclick","window.open('"+productos[nfila].image+"');" );
-		borrars[nfila].innerHTML="<button class='btn btn-sm btn-danger btn'>Eliminar</button>";
+		borrars[nfila].innerHTML="<button class='btn btn-sm btn-danger btn'>Borrar</button>";
 		borrars[nfila].firstChild.setAttribute("onclick","borrar('"+productos[nfila].id+"')" );
 		}
 	}
 function borrar(id){
-	fetch('https://api-generator.retool.com/HfBR3U/productos/' + id, {
+	fetch('https://api-generator.retool.com/SQ9mRf/productos/' + id, {
 	method: 'DELETE',
 	})
 	.then(alert('Hecho'))
@@ -79,7 +79,7 @@ function guardar(){
 	formData.append('description', txdescripcion);
     formData.append('category', txcategoria);
 
-   fetch('https://api-generator.retool.com/HfBR3U/productos', {
+   fetch('https://api-generator.retool.com/SQ9mRf/productos', {
         method: 'POST',
         body: JSON.stringify({
 			image:tximagen,
@@ -99,7 +99,7 @@ function guardar(){
 
 }
 function obtenerProductos() {
-	  fetch('https://api-generator.retool.com/HfBR3U/productos')
+	  fetch('https://api-generator.retool.com/SQ9mRf/productos')
             .then(res=>res.json())
             .then(data=>{
 				productos=data;
